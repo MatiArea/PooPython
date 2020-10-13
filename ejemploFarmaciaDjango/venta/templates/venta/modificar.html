@@ -1,0 +1,58 @@
+{% extends "layout/base.html" %}
+
+{% block tittle %}ModifyPage{% endblock tittle %}
+
+{% block content %}
+<div class="col-md-6 offset-md-3 ">
+    <form action='./venta/{{venta.id}}' method="POST">
+        {% csrf_token %}
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nuevo Nombre</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="nombre" value='{{venta.nombreMedicamento}}'>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nueva Droga</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name='droga' value='{{venta.droga}}'>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nueva Obra Social</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name='obraSocial' value='{{venta.obraSocial}}'>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nuevo Plan</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name='plan' value='{{venta.plan}}'>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nuevo Importe </span>
+            </div>
+            <input type="number" step="0.01" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name='importe' value='{{venta.importe}}'>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nueva Fecha y Hora</span>
+            </div>
+            <input type="date" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name='fecha' value='{{fecha}}'>
+            <input type="time" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name='hora' value='{{hora}}'>
+        </div>
+
+        <button type="submit" class="btn btn-success mt-3 float-right">Modificar</button>
+        <button type="submit" class="btn btn-danger m-3 float-right">Cancelar</button>
+    </form>
+</div>
+
+{% endblock content %}

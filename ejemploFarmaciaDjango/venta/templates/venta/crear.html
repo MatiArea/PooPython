@@ -1,0 +1,58 @@
+{% extends "layout/base.html" %}
+
+{% block tittle %}NewPage{% endblock tittle %}
+
+{% block content %}
+<div class="col-md-6 offset-md-3 ">
+    <form action='crearNuevaVenta/' method="POST">
+        {% csrf_token %}
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">{{crearVenta.nombre.label}}</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="nombre" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">{{crearVenta.droga.label}}</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name='droga' required>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">{{crearVenta.obraSocial.label}}</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name='obraSocial' required>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">{{crearVenta.plan.label}}</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name='plan' required>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">{{crearVenta.importe.label}}</span>
+            </div>
+            <input type="number" step="0.01" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name='importe' required>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">{{crearVenta.fechaHora.label}}</span>
+            </div>
+            <input type="date" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name='fecha' required>
+            <input type="time" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name='hora' required>
+        </div>
+
+        <button type="submit" class="btn btn-success mt-3 float-right">Crear</button>
+        <a class="btn btn-danger m-3 float-right" href="../ventas">Cancelar</a>
+    </form>
+</div>
+
+{% endblock content %}
