@@ -5,7 +5,7 @@
  -Python (3.5 o superior)
 
 # Para ejecutar EjercicioFarmacia: 
-  1)- Posicionarse, mediante la consola de comandos, en ./PooPython/EjercicioFarmacia
+  1)- Posicionarse, mediante la consola de comandos, en ./PooPython/EjercicioFarmacia /r/n
   2)- Ejecutar el comando python app.py
   
 # Para ejecutar EjemploFarmaciaDjango: 
