@@ -5,11 +5,11 @@
  -Python (3.5 o superior)
 
 # Para ejecutar EjercicioFarmacia: 
-  1)- Posicionarse, mediante la consola de comandos, en ./PooPython/EjercicioFarmacia /r/n
-  2)- Ejecutar el comando python app.py
+  1. Posicionarse, mediante la consola de comandos, en ./PooPython/EjercicioFarmacia 
+  2. Ejecutar el comando python app.py
   
 # Para ejecutar EjemploFarmaciaDjango: 
-  1)- Posicionarse, mediante la consola de comandos, en ./PooPython/EjercicioFarmaciaDjango
-  2)- Ejecutar el comando pip install 
-  3)- Ejecutar el comando python manage.py runserver
-  4)- Entrar por algun buscador a la direccion 127.0.0.1:8000/ventas
+  1. Posicionarse, mediante la consola de comandos, en ./PooPython/EjercicioFarmaciaDjango
+  2. Ejecutar el comando pip install 
+  3. Ejecutar el comando python manage.py runserver
+  4. Entrar por algun buscador a la direccion 127.0.0.1:8000/ventas
